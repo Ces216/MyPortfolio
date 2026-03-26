@@ -1,0 +1,41 @@
+.navbar {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.hero-content {
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 999px; /* pill */
+}
+
+.hero-title {
+    font-family: "Jersey 10", sans-serif; /* placeholder, se pondrá una img */
+    font-size: 150px;
+    letter-spacing: 2px;
+    line-height: 0.9;
+}
+
+  /* Typing cursor en el título */
+.typed-cursor {
+  display: inline-block;
+  width: 3px; 
+  height: 0.8em;
+  background: black;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero-sub {
+    max-width: 550px;
+    line-height: 2;
+}
