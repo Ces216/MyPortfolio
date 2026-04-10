@@ -1,16 +1,61 @@
-.navbar {
-    font-family: "JetBrains Mono", monospace;
+/* VARIABLES */
+:root {
+    --bg: #02040f;
+    --accent: #20fc8f;
+    --accentOff: #20fc8ec9;
+    --accent2: #7f2ccb;
+    --text:      #ffffff;
+    --textOff: #a8a8a8;
+}   
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(ellipse 55% 60% at 100% 0%,   rgba(126, 44, 203, 0.74) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 50% at 0%   100%,  rgba(32,252,143,0.10) 0%, transparent 55%),
+        var(--bg);
 }
 
-.hero-content {
-    margin-top: 80px;
+strong {
+    color: var(--accent2);
+}
+
+/* navbar */
+
+#navbar {
+      position: fixed; top: 0; width: 100%;
+      z-index: 1000;
+      padding: 10px;
+ }
+
+.navbar {
+    padding-left: 0px;
+    font-family: "JetBrains Mono", monospace;
+    background-color: var(--bg) !important;
+    color: var(--text);
+}
+
+.navbar .nav-link {
+    color: var(--text) !important;
+}
+
+/* hero */
+#home {
+    margin-top: 100px;
     margin-left: 70px;
+    
 }
 
 .hero-tag {
     display: inline-block;
     padding: 4px;
-    border: 1px solid black;
+    border: 1px solid var(--accentOff);
+    color: var(--accentOff);
     border-radius: 999px; /* pill */
 }
 
@@ -21,12 +66,16 @@
     line-height: 0.9;
 }
 
-  /* Typing cursor en el título */
+.nombre {
+    color: var(--bg);
+    -webkit-text-stroke: 2px var(--accent2);}
+
+/* Typing cursor en el título */
 .typed-cursor {
   display: inline-block;
   width: 3px; 
   height: 0.8em;
-  background: black;
+  background: var(--text);
   margin-left: 4px;
   animation: blink 1s step-end infinite;
 }
@@ -38,4 +87,169 @@
 .hero-sub {
     max-width: 550px;
     line-height: 2;
+    color: var(--textOff);
 }
+
+/* Secciones generales */
+.page {
+    margin-left: 70px;
+}
+
+.page-content {
+    background-image: radial-gradient(circle, rgba(32, 252, 142, 0.377) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-color: var(--bg);
+}
+
+.section-label {
+    margin-top: 150px;
+    padding-top: 40px;
+    color: var(--accentOff);
+    font-family:"JetBrains Mono", monospace;
+}
+
+.title {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 100px;
+    line-height: 0.9;
+}
+
+/* sobre mí */
+.about-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 850px;
+    color: var(--textOff);
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-right: 200px;
+    color: var(--textOff);
+}
+
+.stat-card {
+    border: 1px solid #08331d;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: var(--bg);
+}
+ 
+.stat-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+}
+
+.stat-number {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--accent);
+}
+
+/* proyectos */
+.projects-grid {
+    margin-top: 70px;
+    padding: 0 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.7rem;
+
+}
+
+.project-sub{
+    margin-top: 10px;
+    color: var(--textOff);
+}
+
+.card {
+    border: 3px solid var(--bg);
+    color: var(--textOff);
+    background: var(--bg);
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #20fc8f, #7f2ccb);
+    border-radius: 20px 20px 0 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card:hover::before { transform: scaleX(1); }
+
+.card .btn{
+    color: var(--accentOff);
+    background-color: var(--bg);
+    border: 1px solid #08331d;
+}
+
+.card .btn:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      border: 1px solid var(--accentOff);
+}
+
+.card-title {
+    color: var(--accent2);
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: #20fc8e1f;
+    color: var(--accent);
+    border: 1px solid #13995693;
+    letter-spacing: 0.05em;
+}
+
+/* tencologías */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin-top: 80px;
+
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-programm {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tech-programm img {
+    width: 80px;
+}
+
+.tech-programm p {
+    font-family: "JetBrains Mono", monospace;
+
+}
+
+

@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="functions.js">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- programming lenguajes icons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
@@ -36,40 +43,206 @@
                 <li class="nav-item">
                    <a class="nav-link mr-1" href="#">Contacto</a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Dropdown </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
             </ul>
         </div>
     </nav>
-    
-    <!-- Hero -->
-    <section id="home">
-        <div class="hero-content">
-            <div class="hero-tag mb-0">Disponible para proyectos</div>
-            <h1 class="hero-title">
-                <div>Hola, soy</div>
-                <div>
-                    <span>César Herrero</span>
-                    <div>Andrades</div>
+        <!-- Hero -->
+        <section id="home">
+            <div class="hero-content">
+                <div class="hero-tag p-2 mt-5 mb-0">Disponible para proyectos</div>
+                <h1 class="hero-title">
+                    <div>Hola, soy</div>
+                    <div class="nombre">
+                        <span>César Herrero</span>
+                        <div>Andrades</div>
+                    </div>
+                    <div class="typed-cursor"></div>
+                </h1>
+                <p class="hero-sub">
+                    Estudiante de <strong>DAM</strong> apasionado, trabajador y con muchas ganas de aprender.
+                    Me especializo en desarrollar aplicaciones(fullstack) y pongo mucho interés en 
+                    las interfaces y el diseño para acabar de pulir mis proyectos.
+                </p>
+            </div>
+        </section>
+    <div class="page-content">
+        <div class="page">
+            <!-- Sobre mi -->
+            <section id="about">
+                <div class="section-label">// Sobre mí</div>
+                <h2 class="title">Un poco de mi historia.</h2>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Soy estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>
+                            en Madrid, con una obsesión sana por entender cómo funcionan las cosas por dentro.
+                        </p>
+                        <p>
+                            Empecé programando en <strong>Java</strong> y rápidamente amplié mi camino hacia
+                            <strong>Python</strong>, desarrollo web y bases de datos. Cada proyecto es una oportunidad
+                            de aprender algo nuevo.
+                        </p>
+                        <p>
+                            Cuando no estoy programando, me dedico a reforzar otras habilidades como el diseño, a aumentar mi conocimiento
+                            cultural o a trabajar en mi mismo, pero siempre estoy mejorando.  
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Años programando</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Proyectos completados</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Tecnologías</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Ganas de aprender</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="typed-cursor"></div>
-            </h1>
-            <p class="hero-sub">
-                Estudiante de <strong>DAM</strong> apasionado, trabajador y con muchas ganas de aprender.
-                Me especializo en hacer aplicaciones(fullstack) y pongo mucho interés en 
-                la interfaces y el diseño para acabar de pulir mis proyectos.
-            </p>
+            </section>
+
+            <!-- Proyectos -->
+            <section id="projects">
+                <div class="section-label">// Proyectos</div>
+                <h2 class="title">Lo que he construido.</h2>
+                <p class="project-sub">Una selección de proyectos que demuestran mis habilidades y curiosidad técnica</p>
+
+                <div class="projects-grid">
+                    <!-- card 1 -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="logoPlaceHolder.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn btn-primary">Github</a>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="logoPlaceHolder.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn btn-primary">Github</a>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="logoPlaceHolder.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn btn-primary">Github</a>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="logoPlaceHolder.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn btn-primary">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tecnologias -->
+            <section id="tech">
+                <p class="section-label">//Tecnologías</p>
+                <h2 class="title">Mi stack técnico</h2>
+
+                <div class="tech-grid">
+                    <div class="tech-programm">
+                        <p>Java</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>HTML 5</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>CSS 3</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>JavaScript</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>PHP</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>MySQL</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                    </div>
+                    <div class="tech-programm">
+                        <p>Bootstrap</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>Flutter</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>Git</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    </div>
+
+                    <div class="tech-programm">
+                        <p>Python</p>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacta conmigo -->
+             <section id="contact">
+                <p class="section-label">//Contacto</p>
+                <h2 class="title">Hablemos</h2>
+
+             </section>
         </div>
-    </section>
-    
-    <!-- Sobre mi -->
-    <section id="about"></section>
+    </div>
 </body>
 </html>
