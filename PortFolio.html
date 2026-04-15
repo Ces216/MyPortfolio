@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="functions.js">
+    <script src="functions.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
     <!-- programming lenguajes icons -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
-
 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <!-- NavBar logo -->
         <a class="navbar-brand p-0" href="#">
-            <img src="logoPlaceHolder.png" alt="logo" class="mr-2" style="height: 50px;">
+            <img src="resources/tilda_2026-04-07_14-41-36.svg" alt="logo" class="mr-2 ml-3" style="height: 50px;">
         </a>
         <!-- toggler por si se hace muy pequeña la página -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,16 +30,16 @@
                     <a class="nav-link mr-1" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-1" href="#">Sobre mi</a>
+                    <a class="nav-link mr-1" href="#about">Sobre mi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-1" href="#">Proyectos</a>
+                    <a class="nav-link mr-1" href="#projects">Proyectos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-1" href="#">Tecnologías</a>
+                    <a class="nav-link mr-1" href="#tech">Tecnologías</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link mr-1" href="#">Contacto</a>
+                   <a class="nav-link mr-1" href="#contact">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -237,12 +235,40 @@
             </section>
 
             <!-- Contacta conmigo -->
-             <section id="contact">
+            <section id="contact">
                 <p class="section-label">//Contacto</p>
                 <h2 class="title">Hablemos</h2>
-
-             </section>
+                <p class="section-sub">
+                        ¿Tienes un proyecto en mente, una propuesta o simplemente quieres saludar? Estoy disponible y me encantaría escucharte.
+                </p>
+                <div class="contact-wrapper">
+                    <div class="contact-card">
+                        <a href="#" class="contact-link">
+                            <div class="gmail-icon"><img src="resources/google-gmail-svgrepo-com.svg" alt="mail"></div>
+                            cesarherreroandrades@gmail.com
+                            <span class="contact-link-arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="contact-card">
+                        <a href="#" class="contact-link">
+                            <div class="github-icon"><img src="resources/github-svgrepo-com.svg" alt="github"></div>
+                            Github
+                            <span class="contact-link-arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="contact-card">
+                        <a href="#" class="contact-link">
+                            <div class="gmail-icon"><img src="resources/linkedin-svgrepo-com.svg" alt="linkedin"></div>
+                            Linkedin
+                            <span class="contact-link-arrow">→</span>
+                        </a>
+                    </div>    
+                </div>
+            </section>
         </div>
     </div>
+    <footer>
+        <p>Diseñado y construido por <strong>César Herrero Andrades</strong> · 2026</p>
+    </footer>
 </body>
 </html>
