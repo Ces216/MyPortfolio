@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 44" width="120" height="44">
+  <!-- corchetes -->
+  <text x="2" y="34" font-family="JetBrains Mono" font-size="36" font-weight="700" fill="#7f2ccb">&lt;</text>
+  <text x="100" y="34" font-family="JetBrains Mono" font-size="36" font-weight="700" fill="#7f2ccb">/&gt;</text>
+  <!-- iniciales -->
+  <text x="50%" y="32" text-anchor="middle" font-family="JetBrains Mono" font-size="22" font-weight="700" fill="#20fc8ec9">CHA</text>
+</svg>
