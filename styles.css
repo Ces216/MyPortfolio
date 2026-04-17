@@ -270,6 +270,18 @@ strong {
       border: 1px solid var(--accentOff);
 }
 
+.card .btn:active:focus {
+    background-color: var(--accentOff);
+    color: var(--bg);
+    box-shadow: none !important;
+    border: none;
+}
+
+.card .btn:focus {
+    box-shadow: none;
+}
+
+
 .card-title {
     color: var(--accent2);
 }
