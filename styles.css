@@ -215,10 +215,10 @@ strong {
 /* proyectos */
 .projects-grid {
     margin-top: 70px;
-    padding: 0 200px;
+    padding: 0 75px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0.7rem;
+    gap: 1rem;
 
 }
 
@@ -228,7 +228,8 @@ strong {
 }
 
 .card {
-    border: 3px solid var(--bg);
+    width: 22rem;
+    border: 5px solid var(--bg);
     color: var(--textOff);
     background: var(--bg);
     position: relative;
@@ -241,14 +242,14 @@ strong {
 .card::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0;                /* Cambiado de 100% a 0 para cubrir el alto */
     left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, #20fc8f, #7f2ccb);
+    width: 3px;            /* Ahora el ancho es el grosor de la línea */
+    height: 100%;          /* El alto ahora ocupa toda la card */
+    background: linear-gradient(to bottom, #20fc8f, #7f2ccb); /* Gradiente de arriba abajo */
     border-radius: 20px 20px 0 0;
-    transform: scaleX(0);
-    transform-origin: left;
+    transform: scaleY(0);  /* Cambiado de scaleX a scaleY para que crezca verticalmente */
+    transform-origin: top; /* Cambiado a 'top' para que la animación baje */
     transition: transform 0.4s ease;
 }
 
