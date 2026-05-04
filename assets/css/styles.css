@@ -217,8 +217,8 @@ strong {
     margin-top: 70px;
     padding: 0 75px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
     /* Esto evita que las tarjetas se estiren para igualar a la más alta */
     align-items: start;
 }
@@ -229,7 +229,6 @@ strong {
 }
 
 .card {
-    width: 22rem;
     border: 5px solid var(--bg);
     color: var(--textOff);
     background: var(--bg);
@@ -258,7 +257,7 @@ strong {
     transform: translateY(-2px);
 }
 
-.card:hover::before { transform: scaleX(1); }
+.card:hover::before { transform: scaleY(1); }
 
 .card .btn{
     color: var(--accentOff);
@@ -298,6 +297,15 @@ strong {
     letter-spacing: 0.05em;
 }
 
+/* Altura fija para todas las imágenes de card */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;   /* recorta por abajo, no por arriba */
+    display: block;
+}
+
 /* --- Badges de estado --- */
 .card-badge {
     position: absolute;
@@ -333,7 +341,7 @@ strong {
 
 .card-img-placeholder {
     width: 100%;
-    height: 160px;
+    height: 200px;
     background: repeating-linear-gradient(
         -45deg,
         transparent,
