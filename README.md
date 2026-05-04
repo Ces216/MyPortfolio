@@ -47,8 +47,7 @@ El fondo interactivo está implementado desde cero utilizando Canvas, generando 
 ## 🚀 Demo
 
 Puedes ver la web aquí:
-
-👉 https://TU-USUARIO.github.io/portfolio/
+https://ces216.github.io/MyPortfolio/
 
 ---
 
