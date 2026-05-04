@@ -219,7 +219,8 @@ strong {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
-
+    /* Esto evita que las tarjetas se estiren para igualar a la más alta */
+    align-items: start;
 }
 
 .project-sub{
@@ -295,6 +296,52 @@ strong {
     color: var(--accent);
     border: 1px solid #13995693;
     letter-spacing: 0.05em;
+}
+
+/* --- Badges de estado --- */
+.card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.badge-wip {
+    background: rgba(126, 44, 203, 0.699);
+    color: #dbbffd;
+    border: 1px solid rgba(127, 44, 203, 0.45);
+}
+
+.badge-soon {
+    background: rgba(32, 252, 142, 0.08);
+    color: var(--accent);
+    border: 1px solid #13995693;
+}
+
+/* --- Card Coming Soon — aspecto deshabilitado --- */
+.card-coming-soon {
+    opacity: 0.55;
+    pointer-events: none;  /* quita hover, clicks, etc. */
+    user-select: none;
+}
+
+.card-img-placeholder {
+    width: 100%;
+    height: 160px;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        rgba(255,255,255,0.03) 8px,
+        rgba(255,255,255,0.03) 16px
+    );
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 /* tencologías */
